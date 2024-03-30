@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="public/assets/css/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
-    <header class="primary-heading | bg-primary-500">
+    <header class="primary-heading | bg-primary-300">
         <div class="container">
             <div class="nav-wrapper">
-                <a href=""><img src="public/assets/images/other/logo.png" alt=""></a>
-                <nav>
+               
+                    <a href=""><img src="public/assets/images/other/logo.png" alt=""></a>
+
+              
+                <nav id="primary-navigation" class="primary-navigation">
                     <ul class="nav-list" role="list">
                         <li><a class="fs-200" href="">Home</a></li>
                         <li><a class="fs-200" href="">Explore</a></li>
@@ -22,42 +31,52 @@
                         <li><a class="fs-200" href="">Contact</a></li>
                     </ul>
                 </nav>
-                <button>Connect Wallet</button>
+                <button id="connect-btn" class="btn-yellow connect">Connect Wallet</button>
+                <button id="close-icon" class="close-icon | visually-hidden"><img src="public/assets/images/other/close-3.svg" alt=""></button>
+                <button id="burger-icon" class="burger-icon | visually-hidden"><img src="public/assets/images/other/burger-icon.svg" alt=""></button>
+
             </div>
 
         </div>
     </header>
     <main>
-        <section class="hero | bg-primary-500">
+        <section class="hero | padding-block-900 bg-primary-300">
             <div class="container">
                 <div class="even-columns">
-                    <div>
-                        <h1 class="fs-primary-heading">Discover rare collection of Art and <strong class="bg-primary-500">NFT</strong> </h1>
-                        <p class="fs-300">Eros donec ac odio tempor orci dapibus ultrices in iaculis. Orci phasellus
+                    <div class="">
+                        <h1 class="fs-primary-heading">Discover rare collection of Art and <strong
+                                class="bg-primary-500">NFT</strong> 
+                            </h1>
+                        <p class="fs-300 mt-400">Eros donec ac odio tempor orci dapibus ultrices in iaculis. Orci phasellus
                             egestas tellus rutrum tellus. Sem fringilla ut morbi tincidunt odio tempor
                             orci.Sem fringilla ut morbi tincidunt odio tempor orci.
                         </p>
-                        <div class="buttons-container">
-                            <button>Start Now</button>
-                            <button>Join as creator</button>
+                        <div class="buttons-container mt-300">
+                            <button class="btn-black" > <a href="">Start Now</a> </button>
+                            <button class="btn-yellow ml-200-lg" ><a href="">Join as creator</a> </button>
                         </div>
-                        <div class="stats">
-                            <div class="info | fs-500">
-                                <p>73k</p>
-                                <span>Auction</span>
+                       <div class="stats | t-center fw-semi-bold">
+                            <div class="even-columns">
+                                <div class="info">
+                                    <p class=" fs-500">73k</p>
+                                    <span>Auction</span>
+                                </div>
+                                <div class="info">
+                                    <p class=" fs-500">5.1M</p>
+                                    <span>Artists</span>
+                                </div>
+                                <div class="info">
+                                    <p class=" fs-500">2.2B</p>
+                                    <span>Artwork</span>
+                                </div>
                             </div>
-                            <div class="info | fs-500">
-                                <p>5.1M</p>
-                                <span>Artists</span>
-                            </div>
-                            <div class="info | fs-500">
-                                <p>73k</p>
-                                <span>Artwork</span>
-                            </div>
+
+
                         </div>
 
 
                     </div>
+
                     <div class="hero-img">
                         <img src="public/assets/images/other/hero-img.png" alt="">
                     </div>
@@ -66,60 +85,60 @@
         </section>
         <section class="reviews">
             <div class="container">
-                <div class="rewiews-columns">
-                    <div class="feedback | bg-primary-400">
+                <div class="reviews-columns">
+                    <div class="feedback | bg-primary-400 p-600 radius-3">
                         <div>
-                            <h2>Client Feedback</h2>
+                            <h2 class="text-neutral-400">Client Feedback</h2>
                             <div class="icon"></div>
                         </div>
-                        <p class="text-accent-100 fs-500">The growing number of badged collections helps
+                        <p class="text-accent-100 fs-500 mt-400">The growing number of badged collections helps
                             improve the efficacy of our detection system.
                         </p>
-                        <div class="client-profile">
+                        <div class="client-profile mt-300">
                             <div>
-                                <img src="" alt="">
+                                <img src="public/assets/images/other/avatar.png" alt="">
                             </div>
                             <div class="starts"></div>
-                            <div class="client-name"></div>
+                            <div class="client-name | text-accent-100 fs-100">@nabita thumbson</div>
                         </div>
                     </div>
-                    <div>
+                    <div class="text-info | radius-3 p-600">
                         <h2 class="fs-500">The Future of
                             Wallet Technology</h2>
-                        <p class="fs-300">Eros donec ac odio tempor orci dapi
+                        <p class="fs-300 mt-300">Eros donec ac odio tempor orci dapi
                             bus ultrices in iaculis. Orci phasellus
                             egestas tellus rutrum tellus.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="howitworks | padding-block-900">
             <div class="container">
-                <h2 class="fs-secondary-heading">How it works</h2>
-                <div class="even-columns">
-                    <div class="step">
-                        <div class="bg-neutral-500"><img src="public/assets/images/other/icon-1.png" alt=""></div>
+                <h2 class="fs-secondary-heading mb-700">How it works</h2>
+                <div class="even-columns | t-center">
+                    <div class="step p-300">
+                        <div class="w-fit p-300 radius-circle inline-auto bg-neutral-500 "><img src="public/assets/images/other/icon-1.png" alt=""></div>
                         <h3 class="fs-400">Set up your wallet</h3>
                         <p class="fs-200">This collection guide explains how to set
                             up your first collection and other save
                             collection.</p>
                     </div>
                     <div class="step">
-                        <div class="bg-neutral-300"><img src="public/assets/images/other/icon-2.png" alt=""></div>
+                        <div class="w-fit p-300 radius-circle inline-auto bg-neutral-300"><img src="public/assets/images/other/icon-2.png" alt=""></div>
                         <h3 class="fs-400">Create your collection</h3>
                         <p class="fs-200">You may have a Coinbase account at this
                             point, but very few are actually set up to
                             buy an NFT.</p>
                     </div>
                     <div class="step">
-                        <div class="bg-neutral-400"><img src="public/assets/images/other/icon-3.png" alt=""></div>
+                        <div class="w-fit p-300 radius-circle inline-auto bg-neutral-400"><img src="public/assets/images/other/icon-3.png" alt=""></div>
                         <h3 class="fs-400">Add your NFTs</h3>
                         <p class="fs-200">Eros donec ac odio tempor orci dapibus
                             ultrices in iaculis.Eros donec ac odio
                             tempor orci.</p>
                     </div>
                     <div class="step">
-                        <div class="bg-neutral-200"><img src="public/assets/images/other/icon-4.png" alt=""></div>
+                        <div class="w-fit p-300 radius-circle inline-auto bg-neutral-200"><img src="public/assets/images/other/icon-4.png" alt=""></div>
                         <h3 class="fs-400">List them for sale</h3>
                         <p class="fs-200">Eros donec ac odio tempor orci dapibus
                             ultrices in iaculis.Eros donec ac odio
@@ -128,169 +147,164 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="explore | padding-block-900">
             <div class="container">
-                <h2 class="fs-secondary-heading">Explore MarketPlace</h2>
-                <div class="even-columns">
-                    <div class="card | text-accent-100 bg-primary-400">
+                <h2 class="fs-secondary-heading mb-700">Explore MarketPlace</h2>
+                <div class="even-columns t-center">
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
                         <img src="public/assets/images/market/mark-1.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-1.png" alt=""></div>
+                        <div class="head mt-300">
+                            <div class="info ">
+                            <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                           
+                            <div class="avatar"><img src="public/assets/images/artists/artist-1.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
                         <img src="public/assets/images/market/mark-2.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-2.png" alt=""></div>
+                        <div class="head mt-300">
+                            <div class="info">
+                                  <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                          
+                            <div class="avatar"><img src="public/assets/images/artists/artist-2.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
                         <img src="public/assets/images/market/mark-3.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-3.png" alt=""></div>
+                        <div class="head mt-300">
+                            <div class="info">
+                                <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                            
+                            <div class="avatar"><img src="public/assets/images/artists/artist-3.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
                         <img src="public/assets/images/market/mark-4.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-4.png" alt=""></div>
+                        <div class="head mt-300">
+                            <div class="info">
+                                 <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                           
+                            <div class="avatar"><img src="public/assets/images/artists/artist-4.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
-                        <img src="public/assets/images/market/mark-5.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-5.png" alt=""></div>
-                        </div>
-                        <div class="pricing">
-                            <span>0.987ETH</span>
-                            <span>1.73ETH</span>
-                        </div>
-                        <button>Place A bid</button>
-                    </div>
-                    <div class="card | text-accent-100 bg-primary-400">
+                 
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
                         <img src="public/assets/images/market/mark-6.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-2.png" alt=""></div>
+                        <div class="head mt-300">
+                            <div class="info">
+                                <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                            
+                            <div class="avatar"><img src="public/assets/images/artists/artist-2.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
-                        <img src="public/assets/images/market/mark-7.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-4.png" alt=""></div>
+                    <div class="card | p-500 radius-3 text-accent-100 bg-primary-400">
+                        <img src="public/assets/images/market/mark-4.png" alt="">
+                        <div class="head mt-300">
+                            <div class="info">
+                                 <h3 class="nft-title">The poser party</h3>
+                            <p class="creator-name text-neutral-100 fs-200">@panditcoast</p>
+                            </div>
+                           
+                            <div class="avatar"><img src="public/assets/images/artists/artist-4.png" alt=""></div>
                         </div>
-                        <div class="pricing">
+                        <div class="pricing mt-300">
                             <span>0.987ETH</span>
                             <span>1.73ETH</span>
                         </div>
-                        <button>Place A bid</button>
+                        <button class="btn-yellow w-full mt-300">Place A bid</button>
                     </div>
-                    <div class="card | text-accent-100 bg-primary-400">
-                        <img src="public/assets/images/market/mark-7.png" alt="">
-                        <div class="head">
-                            <h3>The poser party</h3>
-                            <div class="creator-name">@panditcoast</div>
-                            <div><img src="public/assets/images/artists/artist-3.png" alt=""></div>
-                        </div>
-                        <div class="pricing">
-                            <span>0.987ETH</span>
-                            <span>1.73ETH</span>
-                        </div>
-                        <button>Place A bid</button>
-                    </div>
-                    <button>See More</button>
+                    
+                    
 
                 </div>
+                <button class="btn-black d-block inline-auto mt-600"><a href="">See More</a> </button>
             </div>
         </section>
-        <section>
+        <section class="authors | padding-block-900">
             <div class="container">
-                <h2 class="fs-secondary-heading">Top Autors</h2>
-                <div class="even-columns">
+                <h2 class="fs-secondary-heading mb-700">Top Autors</h2>
+                <div class="even-columns | t-center">
                     <div class="author">
                         <div>
-                            <img src="public/assets/images/artists/artist-1.png" alt="">
+                            <img class="inline-auto" src="public/assets/images/artists/artist-1.png" alt="">
                         </div>
-                        <h3>Novita Thomson</h3>
-                        <p>223 Collections</p>
+                        <h3 class="fw-semi-bold">Novita Thomson</h3>
+                        <p class="fs-200">223 Collections</p>
                     </div>
                     <div class="author">
                         <div>
-                            <img src="public/assets/images/artists/artist-2.png" alt="">
+                            <img class="inline-auto" src="public/assets/images/artists/artist-2.png" alt="">
                         </div>
-                        <h3>Novita Thomson</h3>
-                        <p>223 Collections</p>
+                        <h3 class="fw-semi-bold">Novita Thomson</h3>
+                        <p class="fs-200">223 Collections</p>
                     </div>
                     <div class="author">
                         <div>
-                            <img src="public/assets/images/artists/artist-3.png" alt="">
+                            <img class="inline-auto" src="public/assets/images/artists/artist-3.png" alt="">
                         </div>
-                        <h3>Novita Thomson</h3>
-                        <p>223 Collections</p>
+                        <h3 class="fw-semi-bold">Novita Thomson</h3>
+                        <p class="fs-200">223 Collections</p>
                     </div>
                     <div class="author">
                         <div>
-                            <img src="public/assets/images/artists/artist-4.png" alt="">
+                            <img class="inline-auto" src="public/assets/images/artists/artist-4.png" alt="">
                         </div>
-                        <h3>Novita Thomson</h3>
-                        <p>223 Collections</p>
+                        <h3 class="fw-semi-bold">Novita Thomson</h3>
+                        <p class="fs-200">223 Collections</p>
                     </div>
                     <div class="author">
                         <div>
-                            <img src="public/assets/images/artists/artist-5.png" alt="">
+                            <img class="inline-auto" src="public/assets/images/artists/artist-5.png" alt="">
                         </div>
-                        <h3>Novita Thomson</h3>
-                        <p>223 Collections</p>
+                        <h3 class="fw-semi-bold">Novita Thomson</h3>
+                        <p class="fs-200">223 Collections</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about | padding-block-900">
             <div class="container">
                 <div class="even-columns">
-                    <div>
+                    <div class="img-holder">
                         <img src="public/assets/images/other/cta.png" alt="">
                     </div>
                     <div>
-                        <h2 class="fs-secondary-heading">Our expertize included with
+                        <h2 class="fs-secondary-heading mb-700">Our expertize included with
                             better digital cast
                             performance</h2>
                         <p>Eros donec ac odio tempor orci dapibus ultrices in iaculis.
@@ -314,13 +328,13 @@
                 </div>
             </div>
         </section>
-        <section class="cta">
+        <section class="cta | padding-block-900">
             <div class="container">
-                <div class="cta-wrapper | bg-primary-500">
-                    <h2>Get your stories delivered
+                <div class="cta-wrapper | bg-primary-500 radius-3 t-center">
+                    <h2 class="fs-secondary-heading">Get your stories delivered
                         DeFi Building Infrastructure</h2>
-                    <p>Streamline your hiring process with CloudLab. Your hiring plan can’t wait.</p>
-                    <button>See more</button>
+                    <p class="fs-300 fw-semi-bold inline-auto mt-300">Streamline your hiring process with CloudLab. Your hiring plan can’t wait.</p>
+                    <button class="btn-black mt-400 inline-auto"><a href="">See more</a></button>
                 </div>
             </div>
         </section>
@@ -347,7 +361,7 @@
             </div>
         </div>
     </footer>
-
+<script src="public/assets/js/main.js"></script>
 </body>
 
 </html>
