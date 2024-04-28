@@ -22,7 +22,7 @@
     --fs-600: 36px;
     --fs-700: 42px;
     --fs-800: 48px;
-    --fs-900: 96px;
+    --fs-900: 5rem;
 
     --fs-primary-heading: var(--fs-800);
     --fs-secondary-heading: var(--fs-600);
@@ -38,7 +38,7 @@
     --size-650: 2.25rem;
     --size-700: 3rem;
     --size-800: 4rem;
-    --size-900: 5rem;
+    --size-900: 4rem;
 }
 
 @media(min-width:50em) {
@@ -101,7 +101,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100% !important;
+    max-width: 100%;
     display: block;
 }
 
@@ -137,15 +137,26 @@ button {
 
 
 /* utulity classes */
-.w-full{
+.h-fit {
+    height: fit-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.w-full {
     width: 100%;
 }
+
 .radius-circle {
     border-radius: 50%;
 }
-.radius-3{
+
+.radius-3 {
     border-radius: .3125rem;
 }
+
 .p-300 {
     padding: var(--size-300);
 }
@@ -306,6 +317,7 @@ button {
 .text-neutral-200 {
     color: var(--clr-neutral-200);
 }
+
 .text-neutral-100 {
     color: var(--clr-neutral-100);
 }
@@ -374,8 +386,12 @@ button {
     display: flex;
 }
 
-.abs {
+.absolute {
     position: absolute;
+}
+
+.relative {
+    position: relative;
 }
 
 .container {
@@ -427,7 +443,7 @@ button {
     }
 }
 
-@media(max-width:50em) {
+@media(max-width:49em) {
     .burger-icon {
         display: flex;
         background-color: transparent;
@@ -486,33 +502,74 @@ button {
 
 
 /* Hero */
+@media (min-width: 50em) and (max-width: 970px) {
+    .hero .container>.even-columns {
+        grid-auto-flow: initial;
+        grid-template-columns: 1fr minmax(300px, 1fr);
+    }
+}
+
 .hero .stats .even-columns {
     grid-auto-flow: column;
     gap: 2rem;
     justify-content: flex-start;
 }
+
 @media (min-width:50em) {
     .reviews-columns {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
     .reviews-columns .feedback {
         grid-column: 1 / span 2;
     }
 
 }
+
 @media (max-width:50em) {
     .reviews .feedback {
         --fs-500: var(--fs-300);
     }
+
+    .hero .container>.even-columns {
+        gap: 2rem;
+    }
+
+    .hero .container .info {
+        grid-row: 2;
+    }
 }
-.reviews .client-profile{
+
+.reviews .client-profile {
     display: grid;
     grid-template-columns: auto auto 1fr;
     gap: 0.5rem;
 }
-.reviews .text-info{
+
+.reviews .text-info {
     border: 1px solid var(--clr-primary-400);
+}
+
+.hero .bid-img {
+    bottom: 0;
+    right: 0;
+}
+
+.hero .bid-img img {
+    max-width: fit-content;
+    width: fit-content;
+}
+
+.hero .users-img {
+    top: -2rem;
+    left: -1.5rem;
+}
+
+.hero strong {
+    padding: 0px 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px black;
 }
 
 /* howitworks */
@@ -521,7 +578,8 @@ button {
     grid-auto-flow: initial;
     gap: var(--size-500);
 }
-.howitworks p{
+
+.howitworks p {
     margin-inline: auto;
     max-width: 30ch;
 }
@@ -534,23 +592,27 @@ button {
     justify-items: center;
 }
 
-.explore .card img{
+.explore .card img {
     margin-inline: auto;
 }
-.explore .card > img{
+
+.explore .card>img {
     border-radius: 8px;
 }
-.explore .card .head{
+
+.explore .card .head {
     display: flex;
     justify-content: space-between;
     text-align: start;
 }
-.explore .card .avatar{
+
+.explore .card .avatar {
     width: 50px;
     display: flex;
     align-items: center;
 }
-.explore .card .pricing{
+
+.explore .card .pricing {
     display: flex;
     justify-content: space-between;
 }
@@ -560,18 +622,65 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
     grid-auto-flow: initial;
 }
+
 /* about */
-.about .img-holder{
+.about .img-holder {
     display: flex;
     justify-content: center;
 }
+
 /* cta */
 
-.cta .cta-wrapper{
+.cta .cta-wrapper {
+    position: relative;
     display: grid;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem;
+
 }
-.cta .cta-wrapper p{
-    width: 30ch;
+
+.cta .before {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 9rem;
+}
+
+.cta .after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 9rem;
+}
+
+.cta .fs-secondary-heading {
+    /* font-size: var(--fs-300); */
+}
+
+@media(min-width:50em) {
+    .cta .cta-wrapper p {
+        width: 30ch;
+    }
+}
+
+/* footer */
+.footer .even-columns {
+    gap: 2rem;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.footer .social-links img {
+    width: 30px;
+}
+
+@media(min-width:50em) {
+    .footer .even-columns {
+        justify-content: space-between;
+    }
 }
